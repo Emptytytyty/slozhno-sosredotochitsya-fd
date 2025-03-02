@@ -2,4 +2,104 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--main-font, sans-serif);
+  font-size: var(--main-text-font-size);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.large-title {
+  color: var(--large-titles-text-color);
+}
+
+/* ================ HEADER ============== */
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  gap: 55px;
+  align-items: center;
+  position: relative;
+  padding: calc(var(--section-padding) + 65px) var(--section-padding) var(--section-padding);
+  font-weight: bold;
+  min-block-size: 100vb;
+  background: var(--header-background-image) center no-repeat;
+  background-size: cover;
+}
+
+.header::after, .header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header::after {
+  top: var(--section-padding);
+  right: var(--section-padding);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.header::before {
+  bottom: var(--section-padding);
+  left: var(--section-padding);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+.header__decoration-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: var(--section-padding);
+  right: calc(var(--section-padding) + 9px);
+  line-height: 25px;
+}
+
+.header__decoration-text::after {
+  content: '';
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%; 
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  max-inline-size: 70px;
+}
+
+.header__theme-menu-item {
+  display: inline-block;
+  color: var(--accent-color);
+  padding-inline: 13px;
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
+  border: 1px solid currentColor;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.825;
+}
+
+.header__paragraph { 
+  
 }
