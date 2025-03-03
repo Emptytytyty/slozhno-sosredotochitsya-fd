@@ -4,16 +4,16 @@
 */
 
 :root {
-  --header-padding: 10px;
-  --section-padding: 50px 10px;
-
-  --accent-color: #FF0070;
-  --large-titles-text-color: #DB00FF;
-  --accent-text-color: #000028;
-  --main-text-color: #F1B2CE;
+  --inline-padding: 10px;
+  --section-block-padding: 50px;
 
   --main-font: 'IBM Plex mono';
   --main-text-font-size: 1.125rem;
+}
 
-  --background-image: url(/images/cover-image-dark.png);
+@media (width >= 768px) {
+  :root {
+    --inline-padding: 20px;
+    --section-block-padding: 80px;
+  }
 }

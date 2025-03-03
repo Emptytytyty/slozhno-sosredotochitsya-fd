@@ -1,0 +1,32 @@
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.large-title {
+  color: var(--large-titles-text-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+}
+
+.decorated-zone::after, .decorated-zone::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  top: var(--inline-padding);
+  right: var(--inline-padding);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  bottom: var(--inline-padding);
+  left: var(--inline-padding);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}

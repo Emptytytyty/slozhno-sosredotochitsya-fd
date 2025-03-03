@@ -4,13 +4,36 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --large-titles-text-color: #FFC2E6;
+    --accent-text-color: #353430;
+    --main-text-color: #353430;
+    --title-text-color: var(--main-text-color);
+
+    --background-image: url(/images/cover-image-light.png)
+  }
+  
+  .header__decoration-text {
+    display: none;
+  }
+}
+
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #FF8DCB;
+  --large-titles-text-color: #FFC2E6;
+  --accent-text-color: #353430;
+  --main-text-color: #353430;
+  --title-text-color: var(--main-text-color);
+
+  --background-image: url(/images/cover-image-light.png);
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .header__decoration-text {
+  display: none;
 }
