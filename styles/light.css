@@ -11,8 +11,9 @@
     --accent-text-color: #353430;
     --main-text-color: #353430;
     --title-text-color: var(--main-text-color);
+    --background-color: #FFF1F7;
 
-    --background-image: url(/images/cover-image-light.png)
+    --background-image: url(/images/cover-image-light.png);
   }
   
   .header__decoration-text {
@@ -30,6 +31,7 @@
   --accent-text-color: #353430;
   --main-text-color: #353430;
   --title-text-color: var(--main-text-color);
+  --background-color: #FFF1F7;
 
   --background-image: url(/images/cover-image-light.png);
 }

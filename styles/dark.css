@@ -11,10 +11,10 @@
     --accent-text-color: #000028;
     --main-text-color: #F1B2CE;
     --title-text-color: var(--accent-color);
+    --background-color: #000028;
 
-    --background-image: url(/images/cover-image-dark.png)
+    --background-image: url(/images/cover-image-dark.png);
   }
-  
 }
 
 :root.theme-dark {
@@ -27,6 +27,7 @@
   --accent-text-color: #000028;
   --main-text-color: #F1B2CE;
   --title-text-color: var(--accent-color);
+  --background-color: #000028;
 
   --background-image: url(/images/cover-image-dark.png);
 }
