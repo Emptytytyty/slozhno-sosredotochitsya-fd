@@ -113,14 +113,15 @@
   margin-block-end: 20px;
 }
 
-.content__subtitle {
-  margin-block-end: 20px;
-}
-
 .content__title {
   margin-block-end: 10px;
   font-size: inherit;
 }
+
+.content__subtitle {
+  margin-block-end: 20px;
+}
+
 
 .content__title--regular {
   font-weight: normal;
