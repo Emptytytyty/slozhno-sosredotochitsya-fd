@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  max-inline-size: 100vi;
   font-family: var(--main-font, sans-serif);
   font-size: var(--main-text-font-size);
   background: var(--background-image) center no-repeat;
@@ -18,10 +17,34 @@
 
 .large-title {
   color: var(--large-titles-text-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
 }
 
 .title {
   color: var(--accent-color);
+}
+
+.decorated-zone::after, .decorated-zone::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  top: var(--header-padding);
+  right: var(--header-padding);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  bottom: var(--header-padding);
+  left: var(--header-padding);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
 }
 
 /* ================ HEADER ============== */
@@ -35,28 +58,6 @@
   padding: calc(var(--header-padding) + 65px) var(--header-padding) var(--header-padding);
   font-weight: bold;
   min-block-size: 100vb;
-}
-
-.header::after, .header::before {
-  content: '';
-  display: block;
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-}
-
-.header::after {
-  top: var(--header-padding);
-  right: var(--header-padding);
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-}
-
-.header::before {
-  bottom: var(--header-padding);
-  left: var(--header-padding);
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
 }
 
 .header__decoration-text {
@@ -95,10 +96,11 @@
   display: inline-block;
   color: var(--accent-color);
   padding-inline: 13px;
+  max-block-size: 23px;
 }
 
-.header__theme-menu-item:has(button:focus-visible) {
-  border-block-end: 1px solid var(--accent-color);
+.header__theme-menu-item:hover {
+  outline: 1px solid rgb(255 0 112 / 40%);
 }
 
 .header__theme-menu-item:has(button:focus-visible) {
@@ -114,9 +116,7 @@
 }
 
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
-  line-height: 0.825;
 }
 
 /* ======================== MAIN ===================*/
@@ -148,7 +148,34 @@
   text-shadow: 2px 1px var(--accent-color);
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid #F1B2CE;
+  outline-offset: 1px;
+}
+
 .gallery__image {
   inline-size: 100%;
   object-fit: cover;
+}
+
+/* ======================== FOOTER ==============================*/
+
+.footer {
+  position: relative;
+  min-block-size: 100vb;
+  min-inline-size: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
