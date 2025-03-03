@@ -4,14 +4,16 @@
 */
 
 :root {
-  --section-padding: 10px;
+  --header-padding: 10px;
+  --section-padding: 50px 10px;
 
   --accent-color: #FF0070;
   --large-titles-text-color: #DB00FF;
   --accent-text-color: #000028;
+  --main-text-color: #F1B2CE;
 
   --main-font: 'IBM Plex mono';
   --main-text-font-size: 1.125rem;
 
-  --header-background-image: url(/images/cover-image-dark.png);
+  --background-image: url(/images/cover-image-dark.png);
 }

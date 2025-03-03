@@ -2,8 +2,13 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  max-inline-size: 100vi;
   font-family: var(--main-font, sans-serif);
   font-size: var(--main-text-font-size);
+  background: var(--background-image) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--main-text-color);
 }
 
 .title-decor {
@@ -15,6 +20,10 @@
   color: var(--large-titles-text-color);
 }
 
+.title {
+  color: var(--accent-color);
+}
+
 /* ================ HEADER ============== */
 
 .header {
@@ -23,11 +32,9 @@
   gap: 55px;
   align-items: center;
   position: relative;
-  padding: calc(var(--section-padding) + 65px) var(--section-padding) var(--section-padding);
+  padding: calc(var(--header-padding) + 65px) var(--header-padding) var(--header-padding);
   font-weight: bold;
   min-block-size: 100vb;
-  background: var(--header-background-image) center no-repeat;
-  background-size: cover;
 }
 
 .header::after, .header::before {
@@ -39,15 +46,15 @@
 }
 
 .header::after {
-  top: var(--section-padding);
-  right: var(--section-padding);
+  top: var(--header-padding);
+  right: var(--header-padding);
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
 }
 
 .header::before {
-  bottom: var(--section-padding);
-  left: var(--section-padding);
+  bottom: var(--header-padding);
+  left: var(--header-padding);
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
 }
@@ -58,8 +65,8 @@
   align-items: center;
   text-transform: uppercase;
   position: absolute;
-  top: var(--section-padding);
-  right: calc(var(--section-padding) + 9px);
+  top: var(--header-padding);
+  right: calc(var(--header-padding) + 9px);
   line-height: 25px;
 }
 
@@ -90,8 +97,20 @@
   padding-inline: 13px;
 }
 
+.header__theme-menu-item:has(button:focus-visible) {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:has(button:focus-visible) {
+  border-block-end: 1px solid var(--accent-color);
+}
+
 .header__theme-menu-item:has(.header__theme-menu-button_active) {
   border: 1px solid currentColor;
+}
+
+.header__theme-menu-button {
+  outline: none;
 }
 
 .header__title {
@@ -100,6 +119,36 @@
   line-height: 0.825;
 }
 
-.header__paragraph { 
-  
+/* ======================== MAIN ===================*/
+
+.section {
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.content__subtitle {
+  margin-block-end: 20px;
+}
+
+.content__title {
+  margin-block-end: 10px;
+}
+
+.content__title--regular {
+  font-weight: normal;
+}
+
+.link {
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+.gallery__image {
+  inline-size: 100%;
+  object-fit: cover;
 }
