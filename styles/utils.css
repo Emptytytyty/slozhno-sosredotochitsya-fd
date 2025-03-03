@@ -20,13 +20,13 @@
 .decorated-zone::after {
   top: var(--inline-padding);
   right: var(--inline-padding);
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--theme-menu-color);
+  border-inline-end: 1px solid var(--theme-menu-color);
 }
 
 .decorated-zone::before {
   bottom: var(--inline-padding);
   left: var(--inline-padding);
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--theme-menu-color);
+  border-inline-start: 1px solid var(--theme-menu-color);
 }
